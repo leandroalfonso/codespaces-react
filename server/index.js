@@ -24,4 +24,4 @@ app.get('/', function (req, res) { //endereco da requisicao onde e retornado hel
   res.send(alunos)
 })
 
-app.listen(3000) //execucao do servidor
+app.listen(3001) //execucao do servidor
