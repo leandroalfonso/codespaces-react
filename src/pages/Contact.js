@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const Contact = () => {
 
-axios.get('https://leandroalfonso-upgraded-trout-7ww5xqr64q4c6g5-3001.preview.app.github.dev/geeks').then((response)=>{
+axios.get('https://leandroalfonso-upgraded-trout-7ww5xqr64q4c6g5-3001.preview.app.github.dev/').then((response)=>{
   console.log(response)
 })
 
