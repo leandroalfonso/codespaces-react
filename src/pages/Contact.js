@@ -1,34 +1,20 @@
-import React, { useState } from 'react'
-import {Redirect} from 'react-router-dom'
-import Home from '../pages/Home'
+import React from 'react'
+import axios from 'axios'
+
 
 const Contact = () => {
-  const [input, setInput] = useState("")
-  const [item, setItem] = useState([])
-const arr =[]
-const getInput =()=>{
-setItem(...item, input)
 
-arr.push([item])
+axios.get('https://leandroalfonso-upgraded-trout-7ww5xqr64q4c6g5-3001.preview.app.github.dev/geeks').then((response)=>{
+  console.log(response)
+})
 
 
-console.warn(arr)
-setInput('')
-  
 
-
-  
-   
-
-    
-}
 
   return (
     <div>
       <h1>contatos</h1>
-      <input onChange={(e)=>{setInput(e.target.value)}} type='text' placeholder='teste de input'/>
-      <button onClick={()=>{getInput(input)}}>enviar</button>
-      <h1>{arr}</h1>
+
     </div>
   )
 }

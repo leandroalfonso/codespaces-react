@@ -1,8 +1,27 @@
-const express = require('express');
-const server = express();
+const express = require('express') //importacao do pacote
+const app = express() //instanciando express
 
-server.get('/geeks' , (req, res) => {
-return res.json( { message: 'ola mundo'});
+const alunos = [
+  {
+    nome: 'Aluno1',
+    idade: 12
+  },
+  {
+    nome: 'Aluno2',
+    idade: 13
+  },
+  {
+    nome: 'Aluno3',
+    idade: 14
+  },
+  {
+    nome: 'Aluno4',
+    idade: 15
+  }
+]
+
+app.get('/', function (req, res) { //endereco da requisicao onde e retornado hello world
+  res.send(alunos)
 })
 
-server.listen(3001);
+app.listen(3000) //execucao do servidor
