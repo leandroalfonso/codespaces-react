@@ -1,16 +1,22 @@
 import './App.css';
-import img from '../src/imgs/img.jpg'
 
-function App() {
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={img} />
-        
-       <p>teste</p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+    
+          <Route path='/' element={<Home />} />
+         
+          
+          <Route path="Contact" element={<Contact />} />
+       
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
